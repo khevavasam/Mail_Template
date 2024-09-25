@@ -1,0 +1,232 @@
+/* Стили для всего тела страницы */
+body {
+    font-family: 'Georgia', serif;
+    background-color: #f5f5f5; /* Общий фон страницы */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Основной контейнер */
+.container {
+    width: 100%;
+    max-width: 612px;
+    margin: 50px auto;
+    background-color: #f9f2eb; /* Фон для основного контента */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Контейнер для облака и текста "Reflect" */
+.cloud {
+    position: relative; /* Для позиционирования облака относительно текста */
+    display: inline-block;
+    padding: 0.1em 0.3em; /* Уменьшенные отступы для текста */
+    margin-left: 10px; /* Добавляем отступ слева для сдвига */
+}
+
+/* Стили для текста логотипа "Reflect" */
+.text-container {
+    font-family: 'Georgia', serif; /* Шрифт Georgia */
+    font-size: 3rem; /* Уменьшенный размер шрифта */
+    font-weight: normal; /* Обычный текст (не жирный) */
+    color: #3c2a1b; /* Темный цвет текста */
+    position: relative;
+    z-index: 1;
+    padding: 0.1em 0.3em; /* Уменьшенные внутренние отступы */
+}
+
+/* Добавление облака позади текста */
+.text-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%; /* Уменьшенная ширина облака */
+    height: 100%;
+    background-color: #f8dfb8; /* Цвет облака */
+    border-radius: 50%; /* Закругление для облака */
+    z-index: -1;
+    filter: blur(10px); /* Легкое размытие */
+}
+
+/* Контейнер */
+.header {
+    text-align: left;
+}
+
+.header p {
+    font-size: 16px; /* Размер шрифта, аналогичный скриншоту */
+    font-style: italic; /* Курсивный стиль текста */
+
+    margin-top: 50px; /* Добавляем отступ сверху */
+    margin-bottom: 30px; /* Отступ снизу для пространства между элементами */
+    text-align: left; /* Выравниваем текст по центру */
+}
+h2 {
+    font-size: 28px;
+
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+/* Горизонтальная линия для разделения секций */
+section {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0; /* Тонкая разделительная линия */
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* Основной текст */
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+/* Стиль для имени и подписи, выровненный вправо */
+.signature {
+    font-size: 14px;
+    font-style: italic;
+    color: #777;
+    text-align: right; /* Выровнять подпись по правому краю */
+    margin-right: 0; /* Убираем отступ справа */
+}
+
+footer {
+    margin-top: 20px;
+    padding-top: 10px;
+    background-color: #fef7ee; /* Светлый фон */
+    padding: 15px 20px;
+    border-radius: 8px; /* Скругленные углы секции */
+    border: 1px solid #f4ce96; /* Легкая граница */
+    display: block; /* Столбик элементов */
+}
+
+footer p {
+    font-size: 14px;
+    color: #777; /* Тот же цвет, что и у имен */
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style-type: decimal; /* Нумерация списка */
+    padding-left: 20px;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+footer ul li {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #777; /* Тот же цвет, что и для имен */
+}
+
+footer .button-container {
+    display: flex;
+    justify-content: flex-end; /* Выровнять кнопку по правому краю */
+    align-items: center; /* Центрировать кнопку по вертикали относительно списка */
+    height: 100%; /* Чтобы кнопка была по центру секции */
+}
+
+button {
+    background-color: #f8dfb8;
+    color: #333; /* Темный текст на кнопке */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px; /* Скругленные углы */
+    cursor: pointer;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: background-color 0.3s ease; /* Анимация при наведении */
+    float: right; /* Выравниваем кнопку вправо */
+    margin-top: -60px; /* Поднимаем кнопку выше */
+}
+
+button:hover {
+    background-color: #f4ce96; /* Светлый цвет при наведении */
+}
+
+@media (max-width: 460px) {
+    /* Основной контейнер */
+    .container {
+        max-width: 100%; /* Используем 100% ширины экрана */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    /* Текст логотипа "Reflect" */
+    .text-container {
+        font-size: 2.5rem; /* Уменьшаем размер шрифта для мобильных */
+    }
+
+    /* Текст описания под "Reflect" */
+    .header p {
+        font-size: 14px; /* Уменьшаем размер шрифта для описания */
+        margin-top: 20px; /* Уменьшаем отступ сверху */
+        text-align: center; /* Выравниваем по центру на мобильных */
+    }
+
+    /* Заголовки */
+    h2 {
+        font-size: 24px; /* Уменьшаем размер заголовков */
+    }
+
+    h3 {
+        font-size: 18px; /* Уменьшаем подзаголовки */
+    }
+
+    /* Основной текст */
+    p {
+        font-size: 14px; /* Уменьшаем размер текста для мобильных */
+    }
+
+    /* Подписи (имена) */
+    .signature {
+        font-size: 12px; /* Уменьшаем размер текста для подписей */
+        text-align: left; /* Выравниваем по левому краю на мобильных */
+        margin-bottom: 10px; /* Добавляем немного пространства под подписями */
+    }
+
+    /* Изменяем футер для мобильной версии */
+    footer {
+        display: flex;
+        flex-direction: column; /* Столбец: текст сверху, кнопка снизу */
+        align-items: center; /* Центрируем элементы по горизонтали */
+        padding: 10px; /* Уменьшаем внутренние отступы */
+    }
+
+    /* Список остается сверху */
+    footer ul {
+        margin-bottom: 10px; /* Добавляем небольшой отступ снизу */
+        width: 100%; /* Чтобы список занимал всю ширину */
+        text-align: left; /* Оставляем текст выровненным по левому краю */
+    }
+
+    /* Кнопка без контейнера */
+    button {
+        display: block; /* Делаем кнопку блочным элементом */
+        width: auto; /* Убираем 100% ширину */
+        margin: 20px auto 0 auto; /* Центрируем кнопку с отступом сверху */
+        padding: 10px 20px; /* Внутренние отступы для кнопки */
+        text-align: center; /* Текст на кнопке центрируем */
+        background-color: #f8dfb8;
+        color: #333;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #f4ce96;
+    }
+}
